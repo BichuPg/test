@@ -142,5 +142,12 @@ class Database:
     async def get_db_size(self):
         return (await self.db.command("dbstats"))['dataSize']
 
+    async def set_api(self, api, group_id):
+        await self.grp.update_one({'id': group_id}, {'$set': {'api': api}}, upsert=True)
+
+    async def get_api(self, group_id):
+        group = await self.grp.find_one({'id': group_id})
+        return group['api'] if group else None
+
 
 db = Database(DATABASE_URI, DATABASE_NAME)
