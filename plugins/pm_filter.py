@@ -636,6 +636,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 async def auto_filter(client, msg, spoll=False):
+    api = await db.get_api(msg.chat.id)
     if not spoll:
         message = msg
         settings = await get_settings(message.chat.id)
