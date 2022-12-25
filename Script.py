@@ -11,23 +11,26 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://tamizhmasters.com/')
+    HOME_BUTTONURL_UPDATES = environ.get("HOME_BUTTONURL_UPDATES", 'https://Technical_Bots')
     START_TXT = environ.get("START_TXT", '''<b>Hello {} 👋🏻 Im Search Bot I can share Movies and Series 😁. Just Add Me To Your Group To Earn Your Profit</b>
 
 <i>Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏʀ ʀᴇᴀᴅ ᴍᴏʀᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ</i>''')
     HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """<b><i>🤖 Mʏ Nᴀᴍᴇ : <a href=https://t.me/Tamizhmasters_movie_search_bot><b>Search Bot</b></a>\n
-👑 Oᴡɴᴇʀ : <a href=https://t.me/BavaBee><b>BavaBee</b></a>\n
-👨‍💻 Dᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://t.me/HMF_Owner_1><b>ThiruXD</b></a>\n
+🏆How To Use Bot Popcorn Movies Search Bot ? \n
+🏆Click Here - https://te.legra.ph/Pirate-11-30-2 \n
+🏆Any Doubt / Help, Contact @PirateGamers\n
+🏆Now Enjoy Your Profit 💸. """
+    ABOUT_TXT = """<b><i>🤖 Mʏ Nᴀᴍᴇ : <a href=https://t.me/Popcorn_Movies_Robot><b>Search Bot</b></a>\n
+👑 Oᴡɴᴇʀ : <a href=https://t.me/TechnicalBichu><b>🏆 Technical Bichu 🏆</b></a>\n
+👨‍💻 Dᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://t.me/Technical_Bots><b>⚡ Technical Bots ⚡</b></a>\n
 📝 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏʀᴏɢʀᴀᴍ\n
 📚 ꜰʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏᴛʜᴏɴ 3\n
 📡 ʜᴏsᴛᴇᴅ ᴏɴ : ʜᴇʀᴏᴋᴜ\n
-📢 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ : <a href=https://t.me/HMF_BotzZ><b></b>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n
+📢 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ : <a href=https://t.me/Technical_Bots><b></b>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n
 🌟 ᴠᴇʀsɪᴏɴ : ᴠ 4.0\n</b></i>"""
     SOURCE_TXT = """<b>𝐂𝐫𝐞𝐚𝐭𝐞 𝐎𝐧𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬:</b>
 » I will Create One Bot For You<b>
-» Contact Me @HMF_Owner_1<b>"""
+» Contact Me @Technical_Bots <b>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Search Bot will respond whenever a keyword is found the message
@@ -52,7 +55,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/HMF_Owner_1)</code>
+<code>[Button Text](buttonurl:https://t.me/technicalbichu)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
