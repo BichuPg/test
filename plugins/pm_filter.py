@@ -105,7 +105,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_to_Download_From_Search_Bot/2')
+            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_To_Open_Links_23')
         ]
     )
 
@@ -429,13 +429,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
+                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🚨 Sᴜᴘᴘᴏʀᴛ', url='https://t.me/+DknUHv6DNTQ0NTc1'),
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs 🤖', url='https://t.me/HMF_BotzZ')
+            InlineKeyboardButton(
+                '📣 Group 📣', url='https://t.me/+nMw67oz4F6kxOWZl'),
+            InlineKeyboardButton(
+                '🔔 Updates 🔔', url='https://t.me/Technical_Bots')
         ], [
-            InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
+            InlineKeyboardButton('⚡ Help ⚡', callback_data='help'),
+            InlineKeyboardButton('♦️ About ♦️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -684,7 +687,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_to_Download_From_Search_Bot/2')
+            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_To_Open_Links_23')
         ]
     )
 
@@ -735,8 +738,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Rᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search}</code>\n\n\n😌 ɪꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀʀᴇ ʟᴏᴏᴋɪɴɢ ꜰᴏʀ ɪs ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛʜᴇɴ ʟᴇᴀᴠᴇ ᴀ ᴍᴇssᴀɢᴇ ʙᴇʟᴏᴡ 😌 \n\nᴇxᴀᴍᴘʟᴇ : \n\nᴇɴᴛᴇʀ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ (ʏᴇᴀʀ) ᴛᴀɢ @admin"
-    if imdb and imdb.get('poster'):
+        cap = f"<b><i>📟 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {search}\n🕊ʀᴇQᴜᴇꜱᴛᴇᴅ By : {message.from_user.mention}\n🎭Group : {message.chat.title} \n\n🕐ᴛʜɪs ᴍᴇssɢᴇs ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛɪɴɢ ɪɴ 60 ᴍɪɴᴜᴛᴇ</i></b>"    if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
