@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs 🤖', url='https://t.me/HMF_BotzZ')
+                InlineKeyboardButton('📣 Uᴘᴅᴀᴛᴇs 📣', url='https://t.me/Technical_Bots')
             ],
             [
-                InlineKeyboardButton('🚨 Sᴜᴘᴘᴏʀᴛ', url='https://t.me/+DknUHv6DNTQ0NTc1'),
+                InlineKeyboardButton('♠️ Subscribe ♠️', url='https://youtube.com/@TechnicalBichu'),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -45,13 +45,19 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
+                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🚨 Sᴜᴘᴘᴏʀᴛ', url='https://t.me/+DknUHv6DNTQ0NTc1'),
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs 🤖', url='https://t.me/HMF_BotzZ')
+            InlineKeyboardButton(
+                '🏆 Group 🏆', url='https://t.me/+nMw67oz4F6kxOWZl'),
+            InlineKeyboardButton(
+                '📣 Updates 📣', url='https://t.me/Technical_Bots')
         ], [
             InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
+        ], [
+            InlineKeyboardButton('🔗 Shortner Website Link 🔗',
+                                 url=f'https://omegalinks.in/ref/TechnicalBichu')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -91,13 +97,19 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
+                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🚨 Sᴜᴘᴘᴏʀᴛ', url='https://t.me/+DknUHv6DNTQ0NTc1'),
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs 🤖', url='https://t.me/HMF_BotzZ')
+            InlineKeyboardButton(
+                '🏆 Group 🏆', url='https://t.me/+nMw67oz4F6kxOWZl'),
+            InlineKeyboardButton(
+                '📣 Updates 📣', url='https://t.me/Technical_Bots')
         ], [
             InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
+        ], [
+            InlineKeyboardButton('🔗 Shortner Website Link 🔗',
+                                 url=f'https://omegalinks.in/ref/TechnicalBichu')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -525,7 +537,7 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚄𝙿𝙶𝚁𝙰𝙳𝙴𝙳 𝚈𝙾𝚄𝚁 𝚃𝙴𝙼𝙿𝙻𝙰𝚃𝙴 𝙵𝙾𝚁 {title} to\n\n{template}")
 
-@Client.on_message(filters.command('set_api') & filters.group)
+@Client.on_message(filters.command('set_api') & filters.group & filters.user(ADMINS))
 async def set_api(client, message):
     sts = await message.reply("Checking api")
     userid = message.from_user.id if message.from_user else None
