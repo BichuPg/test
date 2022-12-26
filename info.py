@@ -11,7 +11,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_searc_Bot')
+SESSION = environ.get('SESSION', 'Media_Bot')
 API_ID = int(environ.get('API_ID', '12192489'))
 API_HASH = environ.get('API_HASH', 'ed39e721f5d4fd6d3c05121c1661b8ea')
 BOT_TOKEN = environ.get('BOT_TOKEN', '5748537217:AAEzSD90oQu992zEtqDI-w8dXg8km9Q4ce8')
@@ -34,7 +34,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://Popcorn:Popcorn@cluster0.zotkw95.mongodb.net/?retryWrites=true&w=majority')
 DATABASE_NAME = environ.get('DATABASE_NAME', "Popcorn")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Popcorn')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Popcorns')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001867240136'))
