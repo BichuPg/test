@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /TM-Auto-Shorten-V2
-WORKDIR /TM-Auto-Shorten-V2
+RUN mkdir /test
+WORKDIR /test
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"]
