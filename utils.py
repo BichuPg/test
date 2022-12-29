@@ -379,4 +379,4 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
 async def get_shortlink(link, api: int):
-    return f"https://{URL_SHORTENR_WEBSITE}/st?api={api}&url={link}" if api else f"https://{URL_SHORTENR_WEBSITE}/api?api={URL_SHORTNER_WEBSITE_API}&link={link}" 
+    return f"https://{URL_SHORTENR_WEBSITE}/st?api={api}&url={link}" if api else f"https://{URL_SHORTENR_WEBSITE}/st?api={URL_SHORTNER_WEBSITE_API}&url={link}" 
