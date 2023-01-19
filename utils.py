@@ -379,4 +379,26 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
 async def get_shortlink(link, api: int):
-    return f"https://{URL_SHORTENR_WEBSITE}/st?api={api}&url={link}" if api else f"https://{URL_SHORTENR_WEBSITE}/st?api={URL_SHORTNER_WEBSITE_API}&url={link}" 
+    https = link.split(":")[0]
+    if "http" == https:
+        https = "https"
+        link = link.replace("http", https)
+    url = f'https://omegalinks.in'
+    params = {'api': URL_SHORTNER_WEBSITE_API,
+              'url': link,
+              }
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return f'https://{URL_SHORTENR_WEBSITE}/api?api={api}&link={link}'
+
+    except Exception as e:
+        logger.error(e)
+        return f'{URL_SHORTENR_WEBSITE}/api?api={api}&link={link}'
+    if api else f"https://{URL_SHORTENR_WEBSITE}/st?api={URL_SHORTNER_WEBSITE_API}&url={link}" 
