@@ -401,4 +401,3 @@ async def get_shortlink(link, api: int):
     except Exception as e:
         logger.error(e)
         return f'{URL_SHORTENR_WEBSITE}/api?api={api}&link={link}'
-    if api else f"https://{URL_SHORTENR_WEBSITE}/st?api={URL_SHORTNER_WEBSITE_API}&url={link}" 
